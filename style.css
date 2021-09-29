@@ -5,6 +5,7 @@ body{
     background-repeat: no-repeat, no-repeat;
     background-position: right top, left bottom;
     font-family: 'Source Sans Pro', Arial, sans-serif;
+    background-color: whitesmoke;
 }
 /*Slider Part Start*/
 .switch {
@@ -91,6 +92,7 @@ input:checked + .slider:before {
     margin: 0;
     width: 20%;
     border: 1px solid #ffff;
+    border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     background-color: #ffff;
     display: flex;
