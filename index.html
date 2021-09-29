@@ -22,8 +22,8 @@
     <div class="switcher">
       <p>Annually</p>
       <label class="switch">
-        <input type="checkbox" id="demo">
-        <span class="slider round"></span>
+        <input type="checkbox">
+        <span class="slider round" id="demo"></span>
       </label>
       <p>Monthly</p>
     </div>
@@ -75,26 +75,28 @@
       </div>
     </div>
   </div>
-  <!-- <script type="text/javascript">
-    var value = document.getElementById("basic").textContent;
-    console.log(value);
-    document.getElementById("demo").onclick = function () { toggleFunction() };
+  <script type="text/javascript">
+    //var value = document.getElementById("basic").innerHTML;
+    var clicked = false;
+    window.onload = function () {
+      document.getElementById("demo").onclick = function () { toggle(); };
+    }
 
-    function toggleFunction() {
-      console.log("clicked");
-      console.log(value);
-      if (value == 199.99) {
-        document.getElementById("basic").innerHTML = 19.99;
-        document.getElementById("professional").innerHTML = 24.99;
-        document.getElementById("master").innerHTML = 39.99;
+    function toggle() {
+      if (!clicked) {
+        clicked = true;
+        document.getElementById("basic").innerText = "$19.99";
+        document.getElementById("professional").innerText = "$24.99";
+        document.getElementById("master").innerText = "$39.99";
       }
-      if (value == 19.99) {
-        document.getElementById("basic").innerHTML = 199.99;
-        document.getElementById("professional").innerHTML = 249.99;
-        document.getElementById("master").innerHTML = 399.99;
+      else {
+        clicked = false;
+        document.getElementById("basic").innerText = "$199.99";
+        document.getElementById("professional").innerText = "$249.99";
+        document.getElementById("master").innerText = "$399.99";
       }
     }
-  </script> -->
+  </script>
 </body>
 
 </html>
