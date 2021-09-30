@@ -1,11 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+@import url(https://fonts.google.com/specimen/Montserrat);
 
-body{
-    background-image: url('images/bg-top.svg'), url('images/bg-bottom.svg');
-    background-repeat: no-repeat, no-repeat;
-    background-position: right top, left bottom;
-    font-family: 'Source Sans Pro', Arial, sans-serif;
-    background-color: whitesmoke;
+body {
+  background-image: url("images/bg-top.svg"), url("images/bg-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right top, left bottom;
+  font-family: Montserrat;
+  background-color: whitesmoke;
+  font-size: 15px;
 }
 /*Slider Part Start*/
 .switch {
@@ -16,7 +17,7 @@ body{
   margin: 0.5rem;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -30,8 +31,8 @@ body{
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -42,16 +43,16 @@ body{
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
@@ -67,37 +68,38 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 /*Slider Part End*/
-.title{
-    font-family: 'Source Sans Pro', Arial, sans-serif;
-    color: gray;
-    display: flex;
-    justify-content: center;
+.title {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  color: gray;
+  display: flex;
+  justify-content: center;
 }
-.switcher{
-    font-family: 'Source Sans Pro', Arial, sans-serif;
-    color: gray;
-    display: flex;
-    justify-content: center;
+.switcher {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  color: gray;
+  display: flex;
+  justify-content: center;
 }
-.main{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    font-family: 'Source Sans Pro', Arial, sans-serif;
-    color: gray;
-    text-align: center;
-    font-size: 16px;
+.main {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  color: gray;
+  text-align: center;
+  font-size: 16px;
 }
-.plan{
-    margin: 0;
-    width: 20%;
-    border: 1px solid #ffff;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    background-color: #ffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.plan {
+  margin: 0;
+  width: 20%;
+  border: 1px solid #ffff;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .plan-cost {
@@ -111,13 +113,22 @@ input:checked + .slider:before {
 .plan-features {
   padding: 0 0 20px;
   list-style: outside none none;
+  width: 70%;
 }
 .plan-features li {
+  border-top: 0.2px outset rgba(128, 128, 128, 0.3);
   padding: 8px 5%;
 }
 .plan-select {
+  width: 70%;
   margin: 3rem;
   border: 1px solid #627afe;
+  border-radius: 0.5em;
+  background: linear-gradient(
+    hsl(234, 14%, 74%),
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
   padding: 20px;
   text-align: center;
 }
@@ -126,43 +137,59 @@ input:checked + .slider:before {
   padding: 12px 20px;
   font-size: 0.75em;
   font-weight: 600;
-  color: rgb(33, 142, 179);
+  color: #ffff;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   border-radius: 5px;
 }
-.featured{
-    background-color: #627afe;
-    color: #ffff;
-    margin-top: -1rem;
-    margin-bottom: 1rem;
+.featured {
+  background: linear-gradient(
+    hsl(234, 14%, 74%),
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  color: #ffff;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
 }
-.featured .plan-select{
-    margin: 3rem;
-    border: 1px solid #ffff;
-    padding: 20px;
-    text-align: center;
+.featured .plan-features li {
+  border-top: 0.2px outset rgba(255, 255, 255, 0.3);
 }
-.featured .plan-select a{
-    color: #ffff;
+.featured .plan-select {
+  background: #ffff;
+  margin: 3rem;
+  border: 1px solid #ffff;
+  border-radius: 0.5em;
+  padding: 20px;
+  text-align: center;
+}
+.featured .plan-select a {
+  color: #212cca;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 0.75em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  border-radius: 5px;
 }
 @media (max-width: 991px) {
-    /* Rules for tablets and smaller viewports */
-    .main{
-        display: block;
-        width: 100%;
-    } 
-    .plan{
-        width: 100%;
-    }      
+  /* Rules for tablets and smaller viewports */
+  .main {
+    display: block;
+    width: 100%;
+  }
+  .plan {
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
-    /* Rules for smartphones only */
-    .main{
-        display: block;
-        width: 100%;
-    }
-    .plan{
-        width: 100%;
-    }
+  /* Rules for smartphones only */
+  .main {
+    display: block;
+    width: 100%;
+  }
+  .plan {
+    width: 100%;
+  }
 }
