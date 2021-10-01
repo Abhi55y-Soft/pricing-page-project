@@ -48,10 +48,11 @@ body {
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 }
 
 input:focus + .slider {
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   box-shadow: 0 0 1px #2196f3;
 }
 
@@ -106,9 +107,6 @@ input:checked + .slider:before {
 .right {
   border-radius: 0px 8px 8px 0px;
 }
-/* .featured .plan-title {
-  padding-top: 1.2em;
-} */
 .plan-cost {
   padding: 40px 20px 10px;
   text-align: center;
@@ -154,9 +152,6 @@ input:checked + .slider:before {
   margin-top: -1.5rem;
   margin-bottom: -1.5rem;
 }
-/* .featured .plan-features {
-  margin-top: -3em;
-} */
 .featured .plan-features li {
   border-top: 0.2px outset rgba(255, 255, 255, 0.3);
 }
